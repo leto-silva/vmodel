@@ -41,11 +41,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun initClick(){
        btnDados.setOnClickListener {
-           contador++
+           mViewModel.Contador()
        }
 
        btnMostrar.setOnClickListener {
-           Toast.makeText( this, "Valor Contador: ${contador.toString()}", Toast.LENGTH_SHORT).show()
+           Toast.makeText( applicationContext, "Valor Contador: ${mViewModel.mContador.value}", Toast.LENGTH_SHORT).show()
        }
 
     }

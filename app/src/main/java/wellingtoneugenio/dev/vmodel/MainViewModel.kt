@@ -12,9 +12,12 @@ class MainViewModel: ViewModel() {
     }
 
     private fun validaContador(){
+        contador++
         if (contador > 5){
             contador = 0
         }
+
+        setmContador()
     }
 
     fun Contador(){
